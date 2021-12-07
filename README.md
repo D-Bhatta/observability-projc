@@ -83,12 +83,22 @@ The Backend API is geeting a lot of 404 errors due to user error. The file corre
 
 ## Building KPIs for our plan
 
-
-- Node resource utilization: IO, Memory, and CPU usage across each node.
-- Latency: Latency of the response across services.
-- Error rate: Error rate across the clusters.
-- Saturation: Saturation of resources across the network in terms of number of pods.
-
+- Monitoring of CPU utilization and error rates during deployments, for developing a profile of the system.
+  - Why: So that we can later provision higher resources in advance, minimizing downtime.
+- Total resource utilization (CPU) is always below a threshold less than 0.75, or 75%.
+  - Why: This gives us a buffer of 25% before we need to face downtime due to unavailability of resources.
+- Reduce latency of key services to 100ms max response times from 1000ms.
+  - Why: Refactoring our most latency prone services will decrease the amount of latency throughout the clusters, and improves the overall health of the system.
+- Adding a caching solution infront of all services that have latency higher than 50ms.
+  - Why: This immediately improves response time, since quick retireval of response from a cache gurantees a faster turnaround time.
+- During high traffic, error rate remains less than 1%.
+  - Why: If we can manage a less than 1% error rate even under heavy traffic conditions by provisioning more resources automatically, we can potentially reduce overall downtime to less than 1%. Heavy load can also cause saturation, which also reduces uptime.
+- High traffic doesn't cause network saturation.
+  - Why: Changing our architecture and applications to more gracefully support heavy traffic conditions will reduce spending on infrastructure during peak hours, where most of the dynamic cost comes from.
+- Saturation (pods/node) is less than 50% capacity of the node during normal hours and max 90% of the capacity during peak hours.
+  - Why: Refactoring the applications to handle traffic better, using caching solutions, and improving the architecture will reduce saturation, and therefore downtime due to insufficient resources.
+- Reduction of 40X errors to less than 10% by the end of the month.
+  - Why: High rate of current 40X errors is probably due to user error. Improvements in user experience and investment in user interface design will improve usability and reduce user dissatisfaction. This will also prevent downtime due to too many errors overwhelming the system.
 
 
 ## Final Dashboard
