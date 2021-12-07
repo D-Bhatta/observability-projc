@@ -41,9 +41,7 @@ def init_tracer(service):
             "sampler": {"type": "const", "param": 1},
             "logging": True,
             "reporter_batch_size": 1,
-            'local_agent':
-            # Also, provide a hostname of Jaeger instance to send traces to.
-            {'reporting_host': JAEGER_HOST}},
+            },
         service_name=service,
         validate=True,
         metrics_factory=PrometheusMetricsFactory(service_name_label=service),

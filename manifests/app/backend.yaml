@@ -21,9 +21,6 @@ spec:
         app: backend
     spec:
       containers:
-      - env:
-        - name: JAEGER_HOST
-          value: my-traces-agent.observability.svc.cluster.local
         image: dbhatta/backend-prom-v1.0.0.1
         imagePullPolicy: Always
         name: backend
