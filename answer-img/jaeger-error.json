@@ -1,0 +1,150 @@
+{
+    "data": [
+        {
+            "traceID": "b91e2c10ff2319b1",
+            "spans": [
+                {
+                    "traceID": "b91e2c10ff2319b1",
+                    "spanID": "dbcc97227e0f754a",
+                    "flags": 1,
+                    "operationName": "homepage",
+                    "references": [],
+                    "startTime": 1638843112576399,
+                    "duration": 1279,
+                    "tags": [
+                        {
+                            "key": "sampler.type",
+                            "type": "string",
+                            "value": "const"
+                        },
+                        {
+                            "key": "sampler.param",
+                            "type": "bool",
+                            "value": true
+                        },
+                        {
+                            "key": "component",
+                            "type": "string",
+                            "value": "Flask"
+                        },
+                        {
+                            "key": "http.method",
+                            "type": "string",
+                            "value": "GET"
+                        },
+                        {
+                            "key": "http.url",
+                            "type": "string",
+                            "value": "http://localhost:8081/"
+                        },
+                        {
+                            "key": "span.kind",
+                            "type": "string",
+                            "value": "server"
+                        },
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                },
+                {
+                    "traceID": "b91e2c10ff2319b1",
+                    "spanID": "9eaa82976d7b7c84",
+                    "flags": 1,
+                    "operationName": "req-home",
+                    "references": [
+                        {
+                            "refType": "CHILD_OF",
+                            "traceID": "b91e2c10ff2319b1",
+                            "spanID": "dbcc97227e0f754a"
+                        }
+                    ],
+                    "startTime": 1638843112576645,
+                    "duration": 162,
+                    "tags": [
+                        {
+                            "key": "http.status_code",
+                            "type": "int64",
+                            "value": 200
+                        },
+                        {
+                            "key": "internal.span.format",
+                            "type": "string",
+                            "value": "proto"
+                        }
+                    ],
+                    "logs": [],
+                    "processID": "p1",
+                    "warnings": null
+                }
+            ],
+            "processes": {
+                "p1": {
+                    "serviceName": "backend",
+                    "tags": [
+                        {
+                            "key": "cluster",
+                            "type": "string",
+                            "value": "undefined"
+                        },
+                        {
+                            "key": "container.name",
+                            "type": "string",
+                            "value": "backend"
+                        },
+                        {
+                            "key": "deployment.name",
+                            "type": "string",
+                            "value": "backend"
+                        },
+                        {
+                            "key": "host.ip",
+                            "type": "string",
+                            "value": "10.0.0.4"
+                        },
+                        {
+                            "key": "hostname",
+                            "type": "string",
+                            "value": "backend-7f4785769-q9xv6"
+                        },
+                        {
+                            "key": "ip",
+                            "type": "string",
+                            "value": "10.42.0.73"
+                        },
+                        {
+                            "key": "jaeger.version",
+                            "type": "string",
+                            "value": "Python-4.3.0"
+                        },
+                        {
+                            "key": "pod.name",
+                            "type": "string",
+                            "value": "backend-7f4785769-q9xv6"
+                        },
+                        {
+                            "key": "pod.namespace",
+                            "type": "string",
+                            "value": "observability"
+                        }
+                    ]
+                }
+            },
+            "warnings": null
+        }
+    ],
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "errors": null
+}
