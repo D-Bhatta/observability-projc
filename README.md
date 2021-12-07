@@ -2,13 +2,18 @@
 
 ## Verify the monitoring installation
 
-DONE.
+![Alt text](answer-img/monitoring-res.png)
+![Alt text](answer-img/observability-res.png)
 
 ## Setup the Jaeger and Prometheus source
-DONE
+
+![Alt text](answer-img/grafana-homepage.png)
+![Alt text](answer-img/grafana-data-sources.png)
+![Alt text](answer-img/dashboard-prometheous-as-a-source.png)
 
 ## Create a Basic Dashboard
-DONE
+
+![Alt text](answer-img/dashboard-basic.png)
 
 ## Describe SLO/SLI
 
@@ -33,16 +38,21 @@ The actual SLI is a latency budget of 240 seconds a month, which translates to 9
 - Saturation: Saturation can mean that load is not being evenly distributed or resources might need scaling.
 
 ## Create a Dashboard to measure our SLIs
-DONE.
+
+![Alt text](answer-img/grafana-uptime_sli.png)
 
 ## Tracing our Flask App
-DONE.
+
+![Alt text](answer-img/grafan-spans.png)
+
+![Alt text](answer-img/flask-app.png)
 
 ## Jaeger in Dashboards
-DONE.
+
+![Alt text](answer-img/trace-grafana.png)
 
 ## Report Error
-*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
+
 
 TROUBLE TICKET
 
@@ -50,14 +60,18 @@ Name: Debabrata Bhattacharya
 
 Date: 6th December
 
-Subject: High 404 
+Subject: High 404 error rate
 
 Affected Area: Backend API
 
 Severity: High
 
 Description:
-The Backend API is geeting a lot of 404 errors due to user error. The file corresponding to that section is `backend\app.py`. Screenshot in answer-img under `span-trace-errors.png`.
+The Backend API is geeting a lot of 404 errors due to user error. The file corresponding to that section is `backend\app.py`. 
+
+![Alt text](answer-img/jaeger-error-dashboard.png)
+
+![Alt text](answer-img/span-trace-errors.png)
 
 
 ## Creating SLIs and SLOs
@@ -78,4 +92,5 @@ The Backend API is geeting a lot of 404 errors due to user error. The file corre
 
 
 ## Final Dashboard
-DONE.
+
+![Alt text](answer-img/final-dashboard.png)
