@@ -21,9 +21,9 @@ spec:
         app: backend
     spec:
       containers:
-        image: dbhatta/backend-prom-v1.0.0.2
+      - name: backend
+        image: dbhatta/backend-prom-v1.0.0.1
         imagePullPolicy: Always
-        name: backend
         ports:
         - name: backendport
           containerPort: 8080
